@@ -8,7 +8,7 @@ mongo()
 
 const app = express()
 const bodyParser = require('body-parser')
-app.use(bodyParser.json({limit: '10mb', extended: true}))
+app.use(bodyParser.json({ limit: '10mb', extended: true }))
 
 const obj = JSON.parse(fs.readFileSync('./src/route/route.json', 'utf8'))
 obj.map(v => {
@@ -18,6 +18,5 @@ obj.map(v => {
     console.log(e)
   }
 })
-
 
 export default app
