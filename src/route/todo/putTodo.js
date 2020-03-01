@@ -12,6 +12,5 @@ module.exports = async (req, res) => {
     id: todoId
   }, updateFields, {new: true})
   result = result.toObject()
-  delete result._id
   return res.json(result)
 }

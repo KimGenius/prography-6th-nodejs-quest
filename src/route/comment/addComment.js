@@ -14,7 +14,5 @@ module.exports = async (req, res) => {
     contents
   }).save()
   result = result.toObject()
-  delete result._id
-  delete result.todoId
   return res.json(result)
 }

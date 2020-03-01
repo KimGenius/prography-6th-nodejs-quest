@@ -15,6 +15,5 @@ module.exports = async (req, res) => {
     isCompleted: true
   }).save()
   result = result.toObject()
-  delete result._id
   return res.json(result)
 }

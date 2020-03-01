@@ -8,6 +8,5 @@ module.exports = async (req, res) => {
   }, {isCompleted: true}, {new: true})
   if (!result) return res.status(404).send()
   result = result.toObject()
-  delete result._id
   return res.json(result)
 }
