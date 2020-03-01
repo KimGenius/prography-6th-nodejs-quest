@@ -2,7 +2,7 @@
 import Comment from '../../models/comment'
 
 module.exports = async (req, res) => {
-  const {todoId, commentId} = req.params
+  const { todoId, commentId } = req.params
   const result = await Comment.findOneAndDelete({
     id: commentId,
     todoId

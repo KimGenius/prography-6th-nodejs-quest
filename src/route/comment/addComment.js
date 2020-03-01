@@ -2,8 +2,8 @@
 import Comment from '../../models/comment'
 
 module.exports = async (req, res) => {
-  const {todoId} = req.params
-  const {contents} = req.body
+  const { todoId } = req.params
+  const { contents } = req.body
   if (!contents) {
     return res.status(400).json({
       errorMsg: '필수값들을 입력해주세요'
